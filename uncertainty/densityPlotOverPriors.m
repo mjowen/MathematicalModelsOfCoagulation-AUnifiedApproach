@@ -117,4 +117,24 @@ function densityPlot(prior)
     else
         exportgraphics(f,'posterior.png','Resolution',300)
     end
+    if prior
+        % Extra figure with just 3 curves
+        figure
+        hold on
+        for i=1:5
+            plot(timepoints, data(:,i), 'k', 'LineWidth',1)
+        end
+        title('Prior sampled OD curves')
+        xlabel('Time (mins)')
+        ylabel('Active Substrate Conc. (\muM)')
+        a = gca();
+        f = gcf();
+        f.Units = "inches";
+        set(gcf, 'Position', [0 0 x_width y_width]);
+        a.YGrid = 'on';
+        a.TitleFontWeight = "normal";
+        a.Box = 'off';
+        
+        exportgraphics(f,'prior-samples.png','Resolution',300)
+    end
 end
