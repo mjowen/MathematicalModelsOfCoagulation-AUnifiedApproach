@@ -1,6 +1,9 @@
 # MathematicalModelsOfCoagulation-AUnifiedApproach
  Supplemental code for the paper "Mathematical Models of Coagulation - A Unified Approach""
 
+# Add to path
+All folders should be added to the MATLAB path. This can be done by selecting each folder, right-clicking, clicking "Add to Path" and "Selected Folders".
+
 # Compiling the Unified Model ODE
 In order to speed up the time to solve the model, we recommend compiling the ODE right hand side function (unifiedODE). This can be done with the following MATLAB command:
 ```Matlab
